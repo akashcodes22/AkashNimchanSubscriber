@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/studentIDField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="StudentID"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/speedDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/studentIDField"
+        app:layout_constraintEnd_toStartOf="@id/viewMoreButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/minSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="min speed: 20 km/h" />
+
+        <TextView
+            android:id="@+id/maxSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="max speed: 97 km/h" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/viewMoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speedDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="View More" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
